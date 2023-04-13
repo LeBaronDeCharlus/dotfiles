@@ -1,0 +1,20 @@
+top: g
+bottom: G
+middle: c
+activation_key: End
+up: Up
+down: Down
+right: Right
+left: Left
+start: a
+end: n
+buttons: h s f
+exit: i
+copy_and_exit: y
+scroll_down: C-Down
+scroll_up: C-Up
+exit: q
+cursor_color: #FF0000
+speed: 300
+cursor_size: 9
+decelerator: BackSpace
