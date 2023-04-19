@@ -140,11 +140,15 @@ source "$HOME/.cargo/env"
 
 eval "$(direnv hook bash)"
 
-alias e="/usr/bin/emacsclient -t"
-alias emacs="/usr/bin/emacsclient -t"
+alias u="sudo xbps-install -Suy"
+alias i="sudo xbps-install -S"
+alias dc="sudo docker"
 alias vim="nvim"
 alias a="cd ~/Work/AtmoVera.ai/Code"
+alias rs="cd ~/Work/perso/rust/"
 alias ec="cd ~/Work/Ecov.fr/"
+alias sdev="sudo docker run -it --hostname sdev -v ~/.vimrc:/work/.vimrc sdev:latest /bin/bash"
+alias x="xclip -se c"
 
 setxkbmap fr bepo
 xmodmap -e "keycode 62 = ISO_Level3_Shift"
@@ -162,3 +166,7 @@ if [ -f '/home/void/Src/google-cloud-sdk/path.bash.inc' ]; then . '/home/void/Sr
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/void/Src/google-cloud-sdk/completion.bash.inc' ]; then . '/home/void/Src/google-cloud-sdk/completion.bash.inc'; fi
+
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
