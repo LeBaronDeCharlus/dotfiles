@@ -147,8 +147,14 @@ alias vim="nvim"
 alias a="cd ~/Work/AtmoVera.ai/Code"
 alias rs="cd ~/Work/perso/rust/"
 alias ec="cd ~/Work/Ecov.fr/"
+alias sre="cd ~/Work/Ecov.fr/sre/"
 alias sdev="sudo docker run -it --hostname sdev -v ~/.vimrc:/work/.vimrc sdev:latest /bin/bash"
 alias x="xclip -se c"
+
+function q() {
+  query="${1}"
+  sudo xbps-query -Rs "*${query}*";
+}
 
 setxkbmap fr bepo
 xmodmap -e "keycode 62 = ISO_Level3_Shift"
