@@ -142,6 +142,7 @@ eval "$(direnv hook bash)"
 
 alias u="sudo xbps-install -Suy"
 alias i="sudo xbps-install -S"
+alias r="sudo xbps-remove -RoO"
 alias dc="sudo docker"
 alias vim="nvim"
 alias a="cd ~/Work/AtmoVera.ai/Code"

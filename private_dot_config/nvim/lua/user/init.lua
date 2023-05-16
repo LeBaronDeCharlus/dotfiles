@@ -17,13 +17,17 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "gruvbox-flat",
+  colorscheme = "gruvbox",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
     underline = true,
   },
   lsp = {
+    setup_handlers = {
+      -- add custom handler
+      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end
+    },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
